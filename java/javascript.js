@@ -23,7 +23,7 @@ function generalFunction() {
     };
  
     if (password.includes(" ")) {
-        console.log("Password contains an illegal Character.");
+        console.log("The password " +password, "contains an illegal Character.");
     }
 
     return;

@@ -4,7 +4,7 @@ function generalFunction() {
     console.log("Testing password: " +password,);
 
     function checkLength() {
-        if (password.length>=9 &&password.length<=20) {
+        if (password.length>=8 &&password.length<=20) {
             console.log("The password "+password, " has " +password.length, "characters and meets minimum requirements.");
             return true;
         } else if (password.length>20) {
@@ -21,7 +21,7 @@ function generalFunction() {
             console.log("The password "+password, "contains a special character.");
             return true;
         } else {
-            console.log("The password" +password, "is missing a special character.");
+            console.log("The password " +password, "is missing a special character.");
             return false;
         };
     };
@@ -72,9 +72,25 @@ function generalFunction() {
 
 ////////////////////////////////////////////////////////////////////////////
     
+    function checkValidity() {
+        if ( (checkLength()) && (checkSpecial()) && (checkLowercase()) && (checkUppercase()) && (checkNumbers()) && (checkSpaces()) ) {
+            return true;
+        } else {
+            return false;
+        }
+    };
 
+    checkValidity();
 
+    if (checkValidity()) {
+        console.log("The password " +password, "is valid.");
+        // window.location.replace("www.google.com");
+    } else {
+        console.log("The password " +password, "is not valid.");
+        // do nothing
+    }
 
+    console.log("----------------------------------------------------------")
 
     return;
 };

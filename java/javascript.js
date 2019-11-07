@@ -1,5 +1,21 @@
 function generalFunction() {
 
+    var noticeMin = document.getElementById("notice-min");
+    var noticeMax = document.getElementById("notice-max");
+    var noticeUp = document.getElementById("notice-upCase");
+    var noticeLo = document.getElementById("notice-loCase");
+    var noticeNum = document.getElementById("notice-num");
+    var noticeSpace = document.getElementById("notice-space");
+    
+    if ( (noticeMin.style.display = "block") || (noticeMax.style.display = "block") || (noticeUp.style.display = "block") || (noticeLo.style.display = "block") || (noticeNum.style.display = "block") || (noticeSpace.style.display = "block") ) {
+        document.getElementById("notice-min").style.display = "none";
+        document.getElementById("notice-max").style.display = "none";
+        document.getElementById("notice-upCase").style.display = "none";
+        document.getElementById("notice-loCase").style.display = "none";
+        document.getElementById("notice-num").style.display = "none";
+        document.getElementById("notice-space").style.display = "none";
+    }
+
     let password = document.getElementById("passwordInput").value;
     console.log("Testing password: " +password,);
 

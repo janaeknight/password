@@ -1,12 +1,12 @@
 body {
     display: flex; flex-direction: row; background-color: snow;
-    width: 100vw; height: 100vh; overflow: hidden;
+    width: 100vw; height: 100vh; overflow-x: hidden;
     font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
 
 .busy {
     width: 300px; min-height: 450px;
-    background-color: white; margin: 8vh auto;
+    background-color: white; margin: 2vh auto;
     border: 1px solid black; padding: 30px 50px;
 }
 
@@ -31,6 +31,15 @@ a {
     cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1087.ani), url(http://cur.cursors-4u.net/games/gam-11/gam1087.png), auto !important;
 }
 
+.terms{ padding-top: 35px; }
+
+.war {
+    display: block;
+    font-size: 14.5px; color: red;
+    margin: 2px 2px; padding: 4px 1px;
+}
+
+#notice-min, #notice-max, #notice-special, #notice-space, #notice-upCase, #notice-loCase, #notice-num { display: none; }
 /*footer {
     position: fixed;
     bottom: 0;

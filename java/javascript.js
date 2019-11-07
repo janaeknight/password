@@ -5,13 +5,10 @@ function generalFunction() {
 
     function checkLength() {
         if (password.length>=8 &&password.length<=20) {
-            console.log("The password "+password, " has " +password.length, "characters and meets minimum requirements.");
+            console.log("The password "+password, "has " +password.length, "characters and meets minimum requirements.");
             return true;
-        } else if (password.length>20) {
-            console.log("The password "+password, " has " +password.length, "characters. Maximum is 20 characters." );
-            return false;
         } else {
-            console.log("The password "+password, "only has " +password.length, "characters. Minimum is 8 characters.");
+            console.log("The password "+password, "has " +password.length, "characters. Min - 8. Max - 20" );
             return false;
         };
     };
@@ -59,36 +56,28 @@ function generalFunction() {
     function checkSpaces() {
         if (password.includes(" ")) {
             console.log("The password " +password, "contains an illegal Character.");
+            return false;
+        } else {
             return true;
         }
     };
 
-    checkLength();
-    checkLowercase();
-    checkUppercase();
-    checkSpecial();
-    checkNumbers();
-    checkSpaces();
+
 
 ////////////////////////////////////////////////////////////////////////////
     
     function checkValidity() {
-        if ( (checkLength()) && (checkSpecial()) && (checkLowercase()) && (checkUppercase()) && (checkNumbers()) && (checkSpaces()) ) {
-            return true;
+        if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() ) {
+            console.log("The password " +password, "is valid.");
+            // window.location.replace("www.google.com");
         } else {
-            return false;
-        }
+            console.log("The password " +password, "is not valid.");
+            // do nothing
+        };
+        return;
     };
-
     checkValidity();
 
-    if (checkValidity()) {
-        console.log("The password " +password, "is valid.");
-        // window.location.replace("www.google.com");
-    } else {
-        console.log("The password " +password, "is not valid.");
-        // do nothing
-    }
 
     console.log("----------------------------------------------------------")
 

@@ -1,30 +1,32 @@
 function generalFunction() {
 
-    var noticeMin = document.getElementById("notice-min");
-    var noticeMax = document.getElementById("notice-max");
+    var noticeMinMax = document.getElementById("notice-minMax");
     var noticeUp = document.getElementById("notice-upCase");
     var noticeLo = document.getElementById("notice-loCase");
     var noticeNum = document.getElementById("notice-num");
     var noticeSpace = document.getElementById("notice-space");
+    var noticeSpecial = document.getElementById("notice-special");
+
     
-    if ( (noticeMin.style.display = "block") || (noticeMax.style.display = "block") || (noticeUp.style.display = "block") || (noticeLo.style.display = "block") || (noticeNum.style.display = "block") || (noticeSpace.style.display = "block") ) {
-        document.getElementById("notice-min").style.display = "none";
-        document.getElementById("notice-max").style.display = "none";
-        document.getElementById("notice-upCase").style.display = "none";
-        document.getElementById("notice-loCase").style.display = "none";
-        document.getElementById("notice-num").style.display = "none";
-        document.getElementById("notice-space").style.display = "none";
-    }
+    //if ( (noticeMinMax.style.display = "block") || (noticeUp.style.display //= "block") || (noticeLo.style.display = "block") || //(noticeNum.style.display = "block") || (noticeSpace.style.display = //"block") ) {
+    //    noticeMinMax.style.display = "none";
+    //    noticeUp.style.display = "none";
+    //    noticeLo.style.display = "none";
+    //    noticeNum.style.display = "none";
+    //    noticeSpace.style.display = "none";
+    //    noticeSpecial.style.display = "none";
+    //}
 
     let password = document.getElementById("passwordInput").value;
     console.log("Testing password: " +password,);
 
     function checkLength() {
-        if (password.length>=8 &&password.length<=20) {
+        if (password.length>=8 && password.length<=20) {
             console.log("The password "+password, "has " +password.length, "characters and meets minimum requirements.");
             return true;
         } else {
             console.log("The password "+password, "has " +password.length, "characters. Min - 8. Max - 20" );
+            //noticeMinMax.style.display = "block";
             return false;
         };
     };
@@ -35,6 +37,7 @@ function generalFunction() {
             return true;
         } else {
             console.log("The password " +password, "is missing a special character.");
+            //noticeSpecial.innerhtml("here")
             return false;
         };
     };
@@ -45,6 +48,7 @@ function generalFunction() {
             return true;
         } else {
             console.log("The password " +password, "is missing a capital letter.");
+            //noticeUp.style.display = "block";
             return false;
         };
     };
@@ -55,6 +59,7 @@ function generalFunction() {
             return true;
         } else {
             console.log("The password " +password, "is missing a lowercase letter.");
+            //noticeLo.style.display = "block";
             return false;
         };
     };
@@ -65,6 +70,7 @@ function generalFunction() {
             return true;
         } else {
             console.log("The password " +password, "is missing a number.");
+            //noticeNum.style.display = "block";
             return false;
         };
     };
@@ -72,10 +78,11 @@ function generalFunction() {
     function checkSpaces() {
         if (password.includes(" ")) {
             console.log("The password " +password, "contains an illegal Character.");
+            //noticeSpace.style.display = "block";
             return false;
         } else {
             return true;
-        }
+        };
     };
 
 

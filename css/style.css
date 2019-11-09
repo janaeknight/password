@@ -3,6 +3,9 @@ body {
     width: 100vw; height: 100vh; overflow-x: hidden;
     font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
+.column {
+    cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1002.cur), auto !important;
+}
 
 .busy {
     width: 300px; min-height: 450px;

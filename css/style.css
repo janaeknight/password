@@ -47,3 +47,9 @@ a {
     position: fixed;
     bottom: 0;
 }*/
+
+header {
+    display: flex; flex-direction: row;
+    width: 100vw; height: 40px;
+    background-color: saddlebrown; color: black;
+}

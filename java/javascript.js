@@ -1,5 +1,10 @@
-function generalFunction() {
+function accountGen() {
 
+    var accEmail = document.getElementById("emailInput").value;
+    var accName = document.getElementById("nameInput").value;
+    var accUser = document.getElementById("usernameInput").value;
+
+    var noticeUserLength = document.getElementById("notice-username");
     var noticeMinMax = document.getElementById("notice-minMax");
     var noticeUp = document.getElementById("notice-upCase");
     var noticeLo = document.getElementById("notice-loCase");
@@ -8,7 +13,8 @@ function generalFunction() {
     var noticeSpecial = document.getElementById("notice-special");
 
     
-    if ( (noticeMinMax.style.display = "block") || (noticeUp.style.display = "block") || (noticeLo.style.display = "block") || (noticeNum.style.display = "block") || (noticeSpace.style.display = "block") ) {
+    if ( (noticeMinMax.style.display = "block") || (noticeUp.style.display = "block") || (noticeLo.style.display = "block") || (noticeNum.style.display = "block") || (noticeSpace.style.display = "block") || (noticeUserLength.style.display = "block") ) {
+        noticeUserLength.style.display = "none";
         noticeMinMax.style.display = "none";
         noticeUp.style.display = "none";
         noticeLo.style.display = "none";
@@ -16,6 +22,17 @@ function generalFunction() {
         noticeSpace.style.display = "none";
         noticeSpecial.style.display = "none";
     }
+
+    function checkUsername() {
+        if (accUser.length>=5 && accUser.length<=16) {
+            console.log("The username: " +accUser, "is valid.");
+            return true;
+        } else {
+            console.log("The username: " +accUser, "is not valid. Username must be between 5 and 16 characters.");
+            noticeUserLength.style.display = "block";
+            return false;
+        }
+    };
 
     let password = document.getElementById("passwordInput").value;
     console.log("Testing password: " +password,);
@@ -85,6 +102,7 @@ function generalFunction() {
         };
     };
 
+checkUsername();
 checkLength();
 checkNumbers();
 checkSpaces();
@@ -95,11 +113,12 @@ checkLowercase();
 ////////////////////////////////////////////////////////////////////////////
     
     function checkValidity() {
-        if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() ) {
+        if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() && checkUsername() ) {
             console.log("The password " +password, "is valid.");
-            // window.location.replace("www.google.com");
+            console.log("All input is valid.")
+            window.location.replace("https://github.com/janaeknight");
         } else {
-            console.log("The password " +password, "is not valid.");
+            console.log("Some input is invalid.");
             // do nothing
         };
         return;

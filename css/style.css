@@ -8,26 +8,25 @@ body {
 }
 
 .busy {
-    width: 300px; min-height: 450px;
+    width: 300px; height: auto;
     background-color: white; margin: 2vh auto;
     border: 1px solid black; padding: 30px 50px;
 }
 
-button {
+#specialButton {
     background-color: black; color: snow;
     border-radius: 5px; border: 1px solid black;
-    padding: 5px; font-size: 16.5px; margin-top: 5px; margin-bottom: 15px;
+    padding: 5px 8px; font-size: 16.5px; margin-top: 8px; margin-bottom: 15px;
+    margin-left: 40%;
     cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1087.ani), url(http://cur.cursors-4u.net/games/gam-11/gam1087.png), auto !important;
 }
 
-input {
+form input {
     background-color: whitesmoke; padding: 6px; 
     border: 1px solid slategray; border-radius: 5px;
-    font-size: 17px; margin-bottom: 5px;
+    font-size: 17px; margin-bottom: 5px; width: 100%;
     cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1087.ani), url(http://cur.cursors-4u.net/games/gam-11/gam1087.png), auto !important;
 }
-
-p { font-size: 20px; }
 
 a {
     text-decoration: none; text-transform: bold; color: slateblue;
@@ -42,7 +41,7 @@ a {
     margin: 2px 2px; padding: 4px 1px;
 }
 
-#notice-minMax, #notice-special, #notice-space, #notice-upCase, #notice-loCase, #notice-num { display: none; }
+#notice-minMax, #notice-special, #notice-space, #notice-upCase, #notice-loCase, #notice-num, #notice-username { display: none; }
 /*footer {
     position: fixed;
     bottom: 0;

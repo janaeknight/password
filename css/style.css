@@ -52,3 +52,8 @@ header {
     width: 100vw; height: 40px;
     background-color: saddlebrown; color: black;
 }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: black; }
+::-webkit-scrollbar-thumb { background: #323232; }
+::-webkit-scrollbar-thumb:hover { background: #888; }

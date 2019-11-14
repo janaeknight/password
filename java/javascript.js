@@ -115,10 +115,9 @@ checkLowercase();
     function checkValidity() {
         if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() && checkUsername() ) {
             console.log("The password " +password, "is valid.");
-            console.log("All input is valid.")
-            window.location.replace("https://github.com/janaeknight");
+            //window.location.replace("https://github.com/janaeknight");
         } else {
-            console.log("Some input is invalid.");
+            console.log("The password " +password, "is not valid.");
             // do nothing
         };
         return;

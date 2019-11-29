@@ -1,8 +1,8 @@
-function accountGen() {
+function generalFunction() {
 
-    var accEmail = document.getElementById("emailInput").value;
-    var accName = document.getElementById("nameInput").value;
-    var accUser = document.getElementById("usernameInput").value;
+    // var accEmail = document.getElementById("emailInput").value;
+    // var accName = document.getElementById("nameInput").value;
+    var accUsername = document.getElementById("usernameInput").value;
 
     var noticeUserLength = document.getElementById("notice-username");
     var noticeMinMax = document.getElementById("notice-minMax");
@@ -24,16 +24,15 @@ function accountGen() {
     }
 
     function checkUsername() {
-        if (accUser.length>=5 && accUser.length<=16) {
-            console.log("The username: " +accUser, "is valid.");
+        if ( (accUsername.length>=5) && (accUsername.length<=16) ) {
+            console.log("The username " +accUsername, "is valid.");
             return true;
         } else {
-            console.log("The username: " +accUser, "is not valid. Username must be between 5 and 16 characters.");
+            console.log("The username " +accUsername, "is not valid.");
             noticeUserLength.style.display = "block";
             return false;
         }
-    };
-
+    }
     let password = document.getElementById("passwordInput").value;
     console.log("Testing password: " +password,);
 
@@ -113,9 +112,9 @@ checkLowercase();
 ////////////////////////////////////////////////////////////////////////////
     
     function checkValidity() {
-        if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() && checkUsername() ) {
+        if ( checkLength() && checkSpecial() && checkLowercase() &&checkUppercase() && checkNumbers() && checkSpaces() ) {
             console.log("The password " +password, "is valid.");
-            //window.location.replace("https://github.com/janaeknight");
+            window.location.replace("main.html");
         } else {
             console.log("The password " +password, "is not valid.");
             // do nothing

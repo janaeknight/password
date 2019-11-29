@@ -3,28 +3,31 @@ body {
     width: 100vw; height: 100vh; overflow-x: hidden;
     font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
+.column {
+    cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1002.cur), auto !important;
+}
 
 .busy {
     width: 300px; height: auto;
     background-color: white; margin: 2vh auto;
     border: 1px solid black; padding: 30px 50px;
-    cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1002.cur), auto !important;
 }
 
-#specialButton {
+button {
     background-color: black; color: snow;
     border-radius: 5px; border: 1px solid black;
-    padding: 5px 8px; font-size: 16.5px; margin-top: 8px; margin-bottom: 15px;
-    margin-left: 40%;
+    padding: 5px; font-size: 16.5px; margin-top: 5px; margin-bottom: 15px;
     cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1087.ani), url(http://cur.cursors-4u.net/games/gam-11/gam1087.png), auto !important;
 }
 
-form input {
+input {
     background-color: whitesmoke; padding: 6px; 
     border: 1px solid slategray; border-radius: 5px;
-    font-size: 17px; margin-bottom: 5px; width: 100%;
+    font-size: 17px; margin-bottom: 5px;
     cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1087.ani), url(http://cur.cursors-4u.net/games/gam-11/gam1087.png), auto !important;
 }
+
+p { font-size: 20px; }
 
 a {
     text-decoration: none; text-transform: bold; color: slateblue;
@@ -39,11 +42,7 @@ a {
     margin: 2px 2px; padding: 4px 1px;
 }
 
-#notice-minMax, #notice-special, #notice-space, #notice-upCase, #notice-loCase, #notice-num, #notice-username { display: none; }
-/*footer {
-    position: fixed;
-    bottom: 0;
-}*/
+#notice-minMax, #notice-special, #notice-space, #notice-upCase, #notice-loCase, #notice-num, #notice-username, #notice-email, #notice-name { display: none; }
 
 header {
     display: flex; flex-direction: row;
@@ -51,6 +50,9 @@ header {
     background-color: saddlebrown; color: black;
 }
 
+.db8 {
+    display: flex; flex-direction: column;
+}
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: black; }

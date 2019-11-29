@@ -18,22 +18,18 @@
                     <img src="css/media/moologo.gif" alt="">
                 </div>
                 <div class="row txt-center">
-                    <p class="t1">Sign up to see photos and videos of famous cows</p>
+                    <p id="t1">Sign up to see photos and videos of famous cows</p>
                 </div>
             </div>
-            <form>
-                <input type="email" id="emailInput" placeholder="Email" required>
-                <input type="input" id="nameInput" placeholder="Full name" required>
-                <input type="input" id="usernameInput" placeholder="Username" min="5" max="16" required>
-                <input type="password" id="passwordInput" placeholder="Password">
-                <div class="">
-                    <button id="specialButton" onclick="accountGen()">Sign Up</button>
-                </div>
-            </form>
+            <input type="email" id="emailInput" placeholder="Email" required>
+            <input type="input" id="nameInput" placeholder="Full name" required>
+            <input type="input" id="usernameInput" placeholder="Username" required>
+            <input type="input" id="passwordInput" placeholder="Password">
+            <button id ="specialButton" onclick="generalFunction()">Sign Up</button>
             <div class="column txt-center">
                 <p class="war" id="notice-username">Username must be between 5 and 16 characters.</p>
                 <p class="war" id="notice-minMax">Create a password between 8 and 20 characters</p>
-                <p class="war" id="notice-special">Passwords should include a special character (#, !, @, $, %, &)</p>
+                <p class="war" id="notice-special">Include a special character (#, !, @, $, %, &)</p>
                 <p class="war" id="notice-space">Passwords cannot contain spaces</p>
                 <p class="war" id="notice-num">Password should have at least one number</p>
                 <p class="war" id="notice-upCase">Password should have at least 1 capital letter</p>
@@ -44,26 +40,27 @@
                 </div>
             </div>
         </div>
-
         <div class="busy txt-center">
-            <span>Have an account? <a id="">Log in.</a></span>
-        </div>
-
-        <div class="txt-center">
-            <br>
-            <p>Download the app.</p>
-            <div class="row">
-                <div class="db3"></div>
-                <div class="db2">
-                    <a><img src="css/media/apst.png" width="100%"></a>
-                </div>
-                <div class="db2">
-                    <a><img src="css/media/gopl.png" width="100%"></a>
-                </div>
-                <div class="db3"></div>
+                <span>Have an account? <a id="">Log in.</a></span>
             </div>
-        </div>
-    </div><!--db8-->
-    <div class="db1"></div>
+    
+            <div class="txt-center">
+                <br>
+                <p>Download the app.</p>
+                <div class="row">
+                    <div class="db3"></div>
+                    <div class="db2">
+                        <a><img src="css/media/apst.png" width="100%"></a>
+                    </div>
+                    <div class="db2">
+                        <a><img src="css/media/gopl.png" width="100%"></a>
+                    </div>
+                    <div class="db3"></div>
+                </div>
+            </div>
+        </div><!--db8-->
+    </div>
+    <div class="db1">
+    </div>
 </body>
 </html>

@@ -30,7 +30,7 @@
 
 /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
 
-.row { display: flex; flex-direction: row; }
+.row { display: flex; flex-direction: row; width: 100%; }
 .column { display: flex; flex-direction: column; }
 
 /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/

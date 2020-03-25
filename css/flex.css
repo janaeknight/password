@@ -1,9 +1,5 @@
 .column {
-    cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1002.cur), auto !important;
-}
-
-.db1, .db2, .db3, .db4, .db5, .db6, .db7, .db8, header {
-    cursor: url(http://cur.cursors-4u.net/food/foo-7/foo630.cur), auto !important;
+    cursor: url(../cur1002.cur), auto !important;
 }
 
 /*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
